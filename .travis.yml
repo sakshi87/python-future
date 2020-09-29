@@ -8,22 +8,49 @@ matrix:
     - python: 2.6
       env: TOXENV=py26
       dist: trusty
+    - python: 2.6
+      arch: arm64
+      env: TOXENV=py26
+      dist: trusty
     - python: 2.7
+      env: TOXENV=py27
+    - python: 2.7
+      arch: arm64
       env: TOXENV=py27
     - python: 3.3
       env: TOXENV=py33
       dist: trusty
       sudo: false
+    - python: 3.3
+      arch: arm64
+      env: TOXENV=py33
+      dist: trusty
+      sudo: false
     - python: 3.4
+      env: TOXENV=py34
+    - python: 3.4
+      arch: arm64
       env: TOXENV=py34
     - python: 3.5
       env: TOXENV=py35
+    - python: 3.5
+      arch: arm64
+      env: TOXENV=py35
     - python: 3.6
+      env: TOXENV=py36
+    - python: 3.6
+      arch: arm64
       env: TOXENV=py36
     - python: 3.7
       env: TOXENV=py37
       dist: xenial    # required for Python 3.7 (travis-ci/travis-ci#9069)
       sudo: required  # required for Python 3.7 (travis-ci/travis-ci#9069)
+    - python: 3.7
+      arch: arm64
+      env: TOXENV=py37
+      dist: xenial    # required for Python 3.7 (travis-ci/travis-ci#9069)
+      sudo: required  # required for Python 3.7 (travis-ci/travis-ci#9069) 
+      
 
 install:
   - pip install typing==3.7.4.1  # required for Python 3.3
